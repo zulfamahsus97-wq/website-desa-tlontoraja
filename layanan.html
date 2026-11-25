@@ -1,0 +1,661 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pelayanan Desa | Desa Tlontoraja</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            scroll-padding-top: 20px;
+        }
+
+        .detail-persyaratan {
+            max-width: 1100px;
+            margin: 35px auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+            scroll-margin-top: 25px;
+        }
+
+        .detail-persyaratan h2 {
+            color: #176747;
+            margin-bottom: 15px;
+        }
+
+        .detail-persyaratan p {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .detail-persyaratan ol {
+            padding-left: 25px;
+            line-height: 2;
+            color: #444;
+        }
+
+        .detail-persyaratan li {
+            padding-left: 5px;
+        }
+
+        .detail-persyaratan ul {
+            padding-left: 25px;
+        }
+
+        .aksi-layanan {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        .btn-persyaratan,
+        .btn-ajukan {
+            display: inline-block;
+            padding: 10px 16px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        .btn-persyaratan {
+            color: #176747;
+            background: #e8f3ed;
+            border: 1px solid #176747;
+        }
+
+        .btn-persyaratan:hover {
+            background: #d7eae0;
+        }
+
+        /* TOMBOL AJUKAN */
+        .btn-ajukan {
+            color: #ffffff !important;
+            background: #176747;
+            border: 1px solid #176747;
+            font-weight: bold;
+            opacity: 1 !important;
+        }
+
+        .btn-ajukan:hover {
+            background: #105237;
+            color: #ffffff !important;
+        }
+
+        .tombol-kembali {
+            display: inline-block;
+            margin-top: 18px;
+            color: #176747;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .tombol-kembali:hover {
+            text-decoration: underline;
+        }
+
+        .daftar-detail {
+            padding: 30px 15px;
+        }
+
+        .judul-detail {
+            text-align: center;
+            color: #176747;
+            margin-bottom: 12px;
+        }
+
+        .deskripsi-detail {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 600px) {
+            .detail-persyaratan {
+                margin: 20px 15px;
+                padding: 22px;
+            }
+
+            .aksi-layanan {
+                flex-direction: column;
+            }
+
+            .aksi-layanan a {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body id="top">
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <h2>DESA TLONTORAJA</h2>
+            <p>Kecamatan Pasean, Kabupaten Pamekasan</p>
+        </div>
+
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="profil.html">Profil Desa</a>
+            <a href="berita.html">Berita</a>
+            <a href="layanan.html">Layanan</a>
+            <a href="galeri.html">Galeri</a>
+            <a href="kontak.html">Kontak</a>
+            <a href="lacak-pengajuan.html">Lacak Pengajuan</a>
+        </nav>
+    </header>
+
+
+    <!-- JUDUL HALAMAN -->
+    <section class="layanan-hero">
+        <h1>Pusat Pelayanan Desa</h1>
+        <p>
+            Pemerintah Desa Tlontoraja hadir untuk memberikan
+            informasi dan pelayanan administrasi kepada masyarakat.
+        </p>
+    </section>
+
+
+    <!-- PENGANTAR -->
+    <section class="layanan-intro">
+        <h2>Pelayanan Administrasi Masyarakat</h2>
+        <p>
+            Silakan pilih jenis pelayanan yang Anda butuhkan.
+            Setiap layanan dilengkapi informasi persyaratan
+            dan prosedur pengajuan.
+        </p>
+    </section>
+
+
+    <!-- 1. PELAYANAN SURAT MENYURAT -->
+    <section class="daftar-layanan">
+
+        <h2>1. Pelayanan Surat Menyurat Desa</h2>
+
+        <div class="layanan-container">
+
+            <article class="layanan-card">
+                <h3>Surat Keterangan Domisili</h3>
+                <p>Informasi persyaratan surat keterangan domisili.</p>
+
+                <div class="aksi-layanan">
+                    <a href="#domisili" class="btn-persyaratan">
+                        Lihat Persyaratan
+                    </a>
+
+                    <a href="formulir.html?layanan=domisili"
+                       class="btn-ajukan">
+                        Ajukan Domisili
+                    </a>
+                </div>
+            </article>
+
+
+            <article class="layanan-card">
+                <h3>Surat Pengantar SKCK</h3>
+                <p>Informasi persyaratan surat pengantar SKCK.</p>
+
+                <div class="aksi-layanan">
+                    <a href="#skck" class="btn-persyaratan">
+                        Lihat Persyaratan
+                    </a>
+
+                    <a href="formulir.html?layanan=pengantar_skck"
+                       class="btn-ajukan">
+                        Ajukan SKCK
+                    </a>
+                </div>
+            </article>
+
+
+            <article class="layanan-card">
+                <h3>Surat Keterangan Usaha</h3>
+                <p>Informasi persyaratan surat keterangan usaha.</p>
+
+                <div class="aksi-layanan">
+                    <a href="#usaha" class="btn-persyaratan">
+                        Lihat Persyaratan
+                    </a>
+
+                    <a href="formulir.html?layanan=usaha"
+                       class="btn-ajukan">
+                        Ajukan Surat Usaha
+                    </a>
+                </div>
+            </article>
+
+
+            <article class="layanan-card">
+                <h3>Surat Keterangan Tidak Mampu</h3>
+                <p>Informasi persyaratan surat keterangan tidak mampu.</p>
+
+                <div class="aksi-layanan">
+                    <a href="#sktm" class="btn-persyaratan">
+                        Lihat Persyaratan
+                    </a>
+
+                    <a href="formulir.html?layanan=sktm"
+                       class="btn-ajukan">
+                        Ajukan SKTM
+                    </a>
+                </div>
+            </article>
+
+
+            <article class="layanan-card">
+                <h3>Surat Pengantar Nikah</h3>
+                <p>Informasi persyaratan administrasi pengantar nikah.</p>
+
+                <div class="aksi-layanan">
+                    <a href="#nikah" class="btn-persyaratan">
+                        Lihat Persyaratan
+                    </a>
+
+                    <a href="formulir.html?layanan=pengantar_nikah"
+                       class="btn-ajukan">
+                        Ajukan Pengantar Nikah
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+
+    <!-- 2. DOKUMEN KEPENDUDUKAN -->
+    <section class="daftar-layanan kependudukan">
+
+        <h2>2. Pelayanan Dokumen Kependudukan</h2>
+
+        <div class="layanan-container">
+
+            <article class="layanan-card">
+                <h3>Pembuatan Kartu Keluarga</h3>
+                <p>Informasi pengurusan Kartu Keluarga.</p>
+
+                <div class="aksi-layanan">
+                    <a href="#kk" class="btn-persyaratan">
+                        Lihat Persyaratan
+                    </a>
+
+                    <a href="formulir.html?layanan=pembuatan_kk"
+                       class="btn-ajukan">
+                        Ajukan Pembuatan KK
+                    </a>
+                </div>
+            </article>
+
+
+            <article class="layanan-card">
+                <h3>Pecah Kartu Keluarga (Pecah KK)</h3>
+                <p>Informasi pengajuan pemisahan Kartu Keluarga.</p>
+
+                <div class="aksi-layanan">
+                    <a href="#pecah-kk" class="btn-persyaratan">
+                        Lihat Persyaratan
+                    </a>
+
+                    <a href="pecah-kk.html" class="btn-ajukan">
+                        Ajukan Pecah KK
+                    </a>
+                </div>
+            </article>
+
+
+            <article class="layanan-card">
+                <h3>Akta Kelahiran</h3>
+                <p>Informasi pengurusan akta kelahiran.</p>
+
+                <div class="aksi-layanan">
+                    <a href="#kelahiran" class="btn-persyaratan">
+                        Lihat Persyaratan
+                    </a>
+
+                    <a href="formulir.html?layanan=akta_kelahiran"
+                       class="btn-ajukan">
+                        Ajukan Akta Kelahiran
+                    </a>
+                </div>
+            </article>
+
+
+            <article class="layanan-card">
+                <h3>Akta Kematian</h3>
+                <p>Informasi pengurusan akta kematian.</p>
+
+                <div class="aksi-layanan">
+                    <a href="#kematian" class="btn-persyaratan">
+                        Lihat Persyaratan
+                    </a>
+
+                    <a href="formulir.html?layanan=akta_kematian"
+                       class="btn-ajukan">
+                        Ajukan Akta Kematian
+                    </a>
+                </div>
+            </article>
+
+
+            <article class="layanan-card">
+                <h3>Pindah Datang Penduduk</h3>
+                <p>Informasi administrasi perpindahan penduduk.</p>
+
+                <div class="aksi-layanan">
+                    <a href="#pindah" class="btn-persyaratan">
+                        Lihat Persyaratan
+                    </a>
+
+                    <a href="formulir.html?layanan=surat_pindah"
+                       class="btn-ajukan">
+                        Ajukan Pindah Datang
+                    </a>
+                </div>
+            </article>
+
+
+            <article class="layanan-card">
+                <h3>Perubahan Data Kependudukan</h3>
+                <p>Informasi perubahan elemen data kependudukan.</p>
+
+                <div class="aksi-layanan">
+                    <a href="#perubahan" class="btn-persyaratan">
+                        Lihat Persyaratan
+                    </a>
+
+                    <a href="formulir.html?layanan=perubahan_data"
+                       class="btn-ajukan">
+                        Ajukan Perubahan Data
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+
+    <!-- INFORMASI PERSYARATAN -->
+    <section class="daftar-detail">
+
+        <h2 class="judul-detail">
+            Informasi Persyaratan Pelayanan
+        </h2>
+
+        <p class="deskripsi-detail">
+            Berikut persyaratan administrasi untuk setiap jenis
+            pelayanan di Pemerintah Desa Tlontoraja.
+        </p>
+
+
+        <!-- DOMISILI -->
+        <article class="detail-persyaratan" id="domisili">
+
+            <h2>Persyaratan Surat Keterangan Domisili</h2>
+
+            <ol>
+                <li>Fotokopi Kartu Keluarga (KK).</li>
+                <li>KTP asli pemohon untuk diperlihatkan kepada petugas.</li>
+                <li>Surat pengantar dari Kepala Dusun.</li>
+                <li>Dokumen lainnya jika diperlukan.</li>
+            </ol>
+
+            <a href="#top" class="tombol-kembali">
+                ↑ Kembali ke daftar layanan
+            </a>
+
+        </article>
+
+
+        <!-- SKCK -->
+        <article class="detail-persyaratan" id="skck">
+
+            <h2>Persyaratan Surat Pengantar SKCK</h2>
+
+            <ol>
+                <li>Fotokopi Kartu Keluarga (KK).</li>
+                <li>KTP asli pemohon.</li>
+            </ol>
+
+            <a href="#top" class="tombol-kembali">
+                ↑ Kembali ke daftar layanan
+            </a>
+
+        </article>
+
+
+        <!-- USAHA -->
+        <article class="detail-persyaratan" id="usaha">
+
+            <h2>Persyaratan Surat Keterangan Usaha</h2>
+
+            <ol>
+                <li>KTP asli pemohon.</li>
+            </ol>
+
+            <a href="#top" class="tombol-kembali">
+                ↑ Kembali ke daftar layanan
+            </a>
+
+        </article>
+
+
+        <!-- SKTM -->
+        <article class="detail-persyaratan" id="sktm">
+
+            <h2>Persyaratan Surat Keterangan Tidak Mampu (SKTM)</h2>
+
+            <ol>
+                <li>Fotokopi Kartu Keluarga (KK).</li>
+                <li>KTP pemohon.</li>
+            </ol>
+
+            <a href="#top" class="tombol-kembali">
+                ↑ Kembali ke daftar layanan
+            </a>
+
+        </article>
+
+
+        <!-- NIKAH -->
+        <article class="detail-persyaratan" id="nikah">
+
+            <h2>Persyaratan Surat Pengantar Nikah</h2>
+
+            <ol>
+                <li>Fotokopi Kartu Keluarga (KK) pemohon.</li>
+                <li>Fotokopi Akta Kelahiran.</li>
+                <li>Fotokopi ijazah terakhir.</li>
+                <li>Fotokopi Kartu Keluarga (KK) calon pasangan.</li>
+                <li>Surat pengantar dari Kepala Dusun.</li>
+            </ol>
+
+            <a href="#top" class="tombol-kembali">
+                ↑ Kembali ke daftar layanan
+            </a>
+
+        </article>
+
+
+        <!-- PEMBUATAN KK -->
+        <article class="detail-persyaratan" id="kk">
+
+            <h2>Persyaratan Pembuatan Kartu Keluarga</h2>
+
+            <ol>
+                <li>Kartu Keluarga (KK) asli.</li>
+                <li>KTP asli pemohon.</li>
+            </ol>
+
+            <a href="#top" class="tombol-kembali">
+                ↑ Kembali ke daftar layanan
+            </a>
+
+        </article>
+
+
+        <!-- PECAH KK -->
+        <article class="detail-persyaratan" id="pecah-kk">
+
+            <h2>Persyaratan Pecah Kartu Keluarga</h2>
+
+            <ol>
+                <li>Kartu Keluarga (KK) asli.</li>
+
+                <li>
+                    Dokumen dasar pecah KK, contohnya:
+                    <ul>
+                        <li>Buku nikah.</li>
+                        <li>Akta cerai.</li>
+                        <li>Dokumen lainnya sesuai keperluan.</li>
+                    </ul>
+                </li>
+
+                <li>KTP asli pemohon.</li>
+            </ol>
+
+
+            <br>
+
+            <a href="#top" class="tombol-kembali">
+                ↑ Kembali ke daftar layanan
+            </a>
+
+        </article>
+
+
+        <!-- AKTA KELAHIRAN -->
+        <article class="detail-persyaratan" id="kelahiran">
+
+            <h2>Persyaratan Akta Kelahiran</h2>
+
+            <ol>
+                <li>Kartu Keluarga (KK) asli.</li>
+                <li>Buku nikah asli orang tua.</li>
+                <li>Keterangan dari rumah sakit atau tempat bersalin.</li>
+                <li>KTP asli pemohon.</li>
+                <li>Dua KTP saksi.</li>
+            </ol>
+
+            <a href="#top" class="tombol-kembali">
+                ↑ Kembali ke daftar layanan
+            </a>
+
+        </article>
+
+
+        <!-- AKTA KEMATIAN -->
+        <article class="detail-persyaratan" id="kematian">
+
+            <h2>Persyaratan Akta Kematian</h2>
+
+            <ol>
+                <li>Kartu Keluarga (KK) asli.</li>
+                <li>KTP asli pemohon yang merupakan salah satu anggota KK.</li>
+                <li>Satu KTP saksi.</li>
+                <li>Tanggal kematian.</li>
+            </ol>
+
+            <a href="#top" class="tombol-kembali">
+                ↑ Kembali ke daftar layanan
+            </a>
+
+        </article>
+
+
+        <!-- PINDAH DATANG -->
+        <article class="detail-persyaratan" id="pindah">
+
+            <h2>Persyaratan Pindah Datang Penduduk</h2>
+
+            <ol>
+                <li>KTP asli pemohon.</li>
+                <li>Kartu Keluarga (KK) asli.</li>
+                <li>Alamat tujuan lengkap.</li>
+            </ol>
+
+            <a href="#top" class="tombol-kembali">
+                ↑ Kembali ke daftar layanan
+            </a>
+
+        </article>
+
+
+        <!-- PERUBAHAN DATA -->
+        <article class="detail-persyaratan" id="perubahan">
+
+            <h2>Persyaratan Perubahan Data Kependudukan</h2>
+
+            <ol>
+                <li>Kartu Keluarga (KK) asli.</li>
+                <li>KTP asli pemohon.</li>
+                <li>Dokumen dasar perubahan.</li>
+                <li>Dua KTP saksi.</li>
+            </ol>
+
+            <a href="#top" class="tombol-kembali">
+                ↑ Kembali ke daftar layanan
+            </a>
+
+        </article>
+
+    </section>
+
+
+    <!-- INFORMASI UMUM -->
+    <section class="informasi-persyaratan">
+
+        <h2>Informasi Pelayanan</h2>
+
+        <p>
+            Untuk informasi lebih lanjut mengenai pelayanan administrasi,
+            masyarakat dapat menghubungi petugas Pemerintah Desa Tlontoraja.
+        </p>
+
+        <p>
+            Khusus dokumen kependudukan, penerbitan dokumen mengikuti
+            kewenangan dan prosedur Dinas Kependudukan dan Pencatatan
+            Sipil Kabupaten Pamekasan.
+        </p>
+
+    </section>
+
+
+    <!-- PELACAKAN PENGAJUAN -->
+    <section class="informasi-persyaratan">
+
+        <h2>Pelacakan Pengajuan Pelayanan</h2>
+
+        <p>
+            Sudah mengajukan permohonan pelayanan secara online?
+            Anda dapat memeriksa status dan perkembangan pengajuan
+            menggunakan nomor registrasi dan nomor WhatsApp.
+        </p>
+
+        <a href="lacak-pengajuan.html" class="btn-ajukan">
+            Lacak Status Pengajuan
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <h2>PEMERINTAH DESA TLONTORAJA</h2>
+        <p>Kecamatan Pasean, Kabupaten Pamekasan, Jawa Timur.</p>
+        <p>© 2026 Pemerintah Desa Tlontoraja.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin - Desa Tlontoraja</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Desa Tlontoraja</h2>
+                <p>Panel Admin</p>
+            </div>
+
+            <nav class="sidebar-menu">
+                <a href="dashboard.html" class="active">Dashboard</a>
+                <button type="button" id="logoutButton">Keluar</button>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="dashboard-header">
+                <div>
+                    <h1>Dashboard Admin</h1>
+                    <p>Kelola pengajuan layanan masyarakat Desa Tlontoraja.</p>
+                </div>
+            </header>
+
+            <section class="statistik">
+
+                <div class="stat-card">
+                    <h3>Total Pengajuan</h3>
+                    <p id="totalPengajuan">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Menunggu</h3>
+                    <p id="totalMenunggu">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Diperiksa</h3>
+                    <p id="totalDiproses">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Perlu Perbaikan</h3>
+                    <p id="totalPerluPerbaikan">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Selesai</h3>
+                    <p id="totalSelesai">0</p>
+                </div>
+
+            </section>
+
+            <section class="pengajuan-section">
+
+                <div class="section-header">
+                    <div>
+                        <h2>Daftar Pengajuan Layanan</h2>
+                        <p>Data pengajuan masyarakat Desa Tlontoraja.</p>
+                    </div>
+
+                    <input
+                        type="search"
+                        id="searchPengajuan"
+                        placeholder="Cari nama, nomor registrasi, atau WhatsApp..."
+                    >
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Nomor Registrasi</th>
+                                <th>Nama Pemohon</th>
+                                <th>WhatsApp</th>
+                                <th>Jenis Layanan</th>
+                                <th>Status</th>
+                                <th>Tanggal</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="daftarPengajuan">
+                            <tr>
+                                <td colspan="8">Memuat data pengajuan...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+
+    <!-- MODAL DETAIL PENGAJUAN -->
+
+    <div id="modalDetail" class="modal">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h2>Detail Pengajuan</h2>
+
+                <button
+                    type="button"
+                    id="tutupModal"
+                    aria-label="Tutup"
+                >
+                    &times;
+                </button>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="detail-item">
+                    <strong>Nomor Registrasi</strong>
+                    <p id="detailRegistrasi">-</p>
+                </div>
+
+                <div class="detail-item">
+                    <strong>Nama Pemohon</strong>
+                    <p id="detailNama">-</p>
+                </div>
+
+                <div class="detail-item">
+                    <strong>Nomor WhatsApp</strong>
+                    <p id="detailWhatsapp">-</p>
+                </div>
+
+                <div class="detail-item">
+                    <strong>Jenis Layanan</strong>
+                    <p id="detailLayanan">-</p>
+                </div>
+
+                <div class="detail-item">
+                    <strong>Status Saat Ini</strong>
+                    <p id="detailStatus">-</p>
+                </div>
+
+                <div class="detail-item">
+                    <strong>Tanggal Pengajuan</strong>
+                    <p id="detailTanggal">-</p>
+                </div>
+
+                <!-- JAWABAN FORMULIR DINAMIS -->
+
+                <hr>
+
+                <div class="detail-item">
+                    <strong>Informasi Tambahan Pemohon</strong>
+
+                    <div id="detailDataFormulir">
+                        Memuat informasi formulir...
+                    </div>
+                </div>
+
+                <hr>
+
+                <!-- DOKUMEN PERSYARATAN -->
+
+                <div class="detail-item">
+                    <strong>Dokumen Persyaratan</strong>
+
+                    <div id="detailDokumen">
+                        Memuat dokumen...
+                    </div>
+                </div>
+
+                <hr>
+
+                <!-- UBAH STATUS PENGAJUAN -->
+
+                <div class="form-update-status">
+
+                    <h3>Ubah Status Pengajuan</h3>
+
+                    <label for="statusBaru">Pilih Status</label>
+
+                    <select id="statusBaru">
+                        <option value="menunggu">Menunggu</option>
+                        <option value="diperiksa">Diperiksa</option>
+                        <option value="perlu_perbaikan">Perlu Perbaikan</option>
+                        <option value="selesai">Selesai</option>
+                    </select>
+
+                    <label for="catatanAdmin">Catatan Admin</label>
+
+                    <textarea
+                        id="catatanAdmin"
+                        rows="4"
+                        placeholder="Tulis catatan untuk pemohon..."
+                    ></textarea>
+
+                    <p id="pesanUpdateStatus" role="status"></p>
+
+                    <button
+                        type="button"
+                        id="simpanPerubahanStatus"
+                    >
+                        Simpan Perubahan
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" id="tutupModalBawah">
+                    Tutup
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="module" src="dashboard.js"></script>
+
+</body>
+</html>

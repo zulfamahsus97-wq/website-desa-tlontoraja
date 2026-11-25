@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persyaratan Pecah KK | Desa Tlontoraja</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <h2>DESA TLONTORAJA</h2>
+            <p>Kecamatan Pasean, Kabupaten Pamekasan</p>
+        </div>
+
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="layanan.html">Pelayanan Desa</a>
+        </nav>
+    </header>
+
+    <!-- JUDUL HALAMAN -->
+    <section class="layanan-hero">
+        <h1>Pelayanan Pecah Kartu Keluarga</h1>
+        <p>
+            Informasi persyaratan dan prosedur pemisahan
+            Kartu Keluarga bagi masyarakat Desa Tlontoraja.
+        </p>
+    </section>
+
+    <!-- INFORMASI -->
+    <section class="informasi-persyaratan">
+
+        <h2>Apa Itu Pecah KK?</h2>
+
+        <p>
+            Pecah Kartu Keluarga merupakan proses pemisahan
+            anggota keluarga dari Kartu Keluarga sebelumnya
+            untuk membentuk Kartu Keluarga tersendiri sesuai
+            ketentuan administrasi kependudukan.
+        </p>
+
+    </section>
+
+    <!-- PERSYARATAN -->
+    <section class="daftar-layanan">
+
+        <h2>Persyaratan Pengajuan</h2>
+
+        <div class="layanan-card">
+
+            <h3>Dokumen yang Perlu Disiapkan</h3>
+
+            <ul>
+                <li>Kartu Keluarga lama.</li>
+                <li>Fotokopi KTP-el anggota keluarga yang akan dipisahkan, jika diperlukan.</li>
+                <li>Dokumen pendukung sesuai alasan pemisahan KK.</li>
+                <li>Persyaratan tambahan sesuai ketentuan Disdukcapil.</li>
+            </ul>
+
+            <p>
+                Catatan: Daftar ini merupakan informasi awal.
+                Persyaratan final perlu dikonfirmasi kepada
+                Disdukcapil Kabupaten Pamekasan.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- PROSEDUR -->
+    <section class="daftar-layanan kependudukan">
+
+        <h2>Prosedur Pengajuan</h2>
+
+        <div class="layanan-card">
+
+            <ol>
+                <li>Siapkan dokumen persyaratan.</li>
+                <li>Ajukan permohonan melalui pelayanan desa.</li>
+                <li>Petugas memeriksa kelengkapan dokumen.</li>
+                <li>Permohonan diteruskan sesuai prosedur Disdukcapil.</li>
+                <li>Pemohon menerima informasi tindak lanjut.</li>
+            </ol>
+
+        </div>
+
+    </section>
+
+<!-- FORMULIR PENGAJUAN PECAH KK -->
+<section class="form-pengajuan">
+
+    <div class="form-container">
+
+        <div class="form-heading">
+            <span>PELAYANAN ONLINE DESA</span>
+
+            <h2>Formulir Pengajuan Pecah KK</h2>
+
+            <p>
+                Silakan isi identitas dan unggah dokumen
+                persyaratan untuk mengajukan pelayanan.
+            </p>
+        </div>
+
+        <form id="formPecahKK">
+
+            <div class="form-group">
+                <label for="nama">Nama Lengkap Pemohon</label>
+
+                <input
+                    type="text"
+                    id="nama"
+                    name="nama"
+                    placeholder="Masukkan nama lengkap"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="whatsapp">Nomor WhatsApp</label>
+
+                <input
+                    type="tel"
+                    id="whatsapp"
+                    name="whatsapp"
+                    placeholder="Contoh: 081234567890"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="dokumen">Upload Dokumen Persyaratan</label>
+
+                <div class="upload-area">
+
+                    <input
+                        type="file"
+                        id="dokumen"
+                        name="dokumen"
+                        accept=".pdf,.jpg,.jpeg,.png"
+                        multiple
+                        required
+                    >
+
+                    <p>Format PDF, JPG, JPEG, atau PNG.</p>
+                    <p>Ukuran maksimal 5 MB per file.</p>
+
+                </div>
+            </div>
+
+            <div class="form-group persetujuan">
+
+                <label>
+                    <input
+                        type="checkbox"
+                        id="persetujuan"
+                        required
+                    >
+
+                    Saya menyatakan bahwa data dan dokumen
+                    yang saya kirim benar serta menyetujui
+                    penggunaannya untuk proses pelayanan desa.
+                </label>
+
+            </div>
+
+            <button type="submit" class="btn-kirim">
+                Kirim Persyaratan
+            </button>
+
+            <p class="catatan-form">
+                Dokumen hanya dapat diakses oleh petugas
+                yang berwenang untuk keperluan pelayanan.
+            </p>
+
+        </form>
+
+    </div>
+
+</section>
+
+    <!-- KONTAK -->
+    <section class="informasi-persyaratan">
+
+        <h2>Informasi Pelayanan</h2>
+
+        <p>
+            Untuk informasi lebih lanjut, silakan menghubungi
+            petugas Pemerintah Desa Tlontoraja.
+        </p>
+
+        <a href="layanan.html" class="btn">
+            Kembali ke Pelayanan Desa
+        </a>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <h2>PEMERINTAH DESA TLONTORAJA</h2>
+        <p>Kecamatan Pasean, Kabupaten Pamekasan.</p>
+        <p>© 2026 Pemerintah Desa Tlontoraja.</p>
+    </footer>
+<script type="module" src="./pecah-kk.js"></script>
+</body>
+</html>

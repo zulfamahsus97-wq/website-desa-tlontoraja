@@ -1,0 +1,548 @@
+
+/* ========================================
+   1. PENGATURAN DASAR
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f6f9;
+    color: #263238;
+    min-height: 100vh;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 14px;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* ========================================
+   2. LAYOUT DASHBOARD
+======================================== */
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* ========================================
+   3. SIDEBAR
+======================================== */
+
+.sidebar {
+    width: 250px;
+    min-width: 250px;
+    background: #075b46;
+    color: white;
+    padding: 28px 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-header {
+    padding: 0 10px 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-header h2 {
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.sidebar-header p {
+    font-size: 13px;
+    color: #d4e9e2;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.sidebar-menu a,
+.sidebar-menu button {
+    display: block;
+    width: 100%;
+    padding: 13px 15px;
+    color: white;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active,
+.sidebar-menu button:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+
+/* ========================================
+   4. KONTEN UTAMA
+======================================== */
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 32px;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+    font-size: 27px;
+    color: #075b46;
+    margin-bottom: 8px;
+}
+
+.dashboard-header p {
+    color: #718096;
+    font-size: 14px;
+}
+
+
+/* ========================================
+   5. KARTU STATISTIK
+======================================== */
+
+.statistik {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+    padding: 23px 20px;
+    border-radius: 12px;
+    border: 1px solid #e8edf0;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.stat-card h3 {
+    font-size: 13px;
+    font-weight: 600;
+    color: #718096;
+    margin-bottom: 13px;
+}
+
+.stat-card p {
+    font-size: 30px;
+    font-weight: bold;
+    color: #075b46;
+}
+
+
+/* ========================================
+   6. BAGIAN DAFTAR PENGAJUAN
+======================================== */
+
+.pengajuan-section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e8edf0;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 22px;
+}
+
+.section-header h2 {
+    font-size: 19px;
+    color: #075b46;
+    margin-bottom: 7px;
+}
+
+.section-header p {
+    color: #718096;
+    font-size: 13px;
+}
+
+#searchPengajuan {
+    width: 300px;
+    max-width: 100%;
+    padding: 11px 14px;
+    border: 1px solid #d8e0e5;
+    border-radius: 7px;
+    outline: none;
+}
+
+#searchPengajuan:focus {
+    border-color: #08765a;
+    box-shadow: 0 0 0 3px rgba(8, 118, 90, 0.1);
+}
+
+
+/* ========================================
+   7. TABEL PENGAJUAN
+======================================== */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #edf5f2;
+}
+
+th {
+    padding: 15px 12px;
+    text-align: left;
+    font-size: 13px;
+    color: #075b46;
+    white-space: nowrap;
+}
+
+td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #edf0f2;
+    font-size: 13px;
+    color: #46545d;
+}
+
+tbody tr:hover {
+    background: #f8fbfa;
+}
+
+td button {
+    padding: 8px 14px;
+    background: #08765a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
+
+td button:hover {
+    background: #065640;
+}
+
+
+/* ========================================
+   8. MODAL DETAIL
+======================================== */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(20, 35, 30, 0.65);
+    padding: 25px;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background: white;
+    width: 100%;
+    max-width: 650px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 14px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 25px;
+    border-bottom: 1px solid #e8edf0;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 2;
+}
+
+.modal-header h2 {
+    color: #075b46;
+    font-size: 21px;
+}
+
+#tutupModal {
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 7px;
+    background: #f0f3f2;
+    color: #52615c;
+    font-size: 24px;
+}
+
+#tutupModal:hover {
+    background: #e2e9e6;
+}
+
+.modal-body {
+    padding: 25px;
+}
+
+.detail-item {
+    margin-bottom: 20px;
+}
+
+.detail-item strong {
+    display: block;
+    font-size: 13px;
+    color: #075b46;
+    margin-bottom: 8px;
+}
+
+.detail-item p {
+    font-size: 14px;
+    color: #52615c;
+    line-height: 1.6;
+}
+
+.detail-item a {
+    display: inline-block;
+    color: #08765a;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.modal-body hr {
+    border: none;
+    border-top: 1px solid #e8edf0;
+    margin: 22px 0;
+}
+
+
+/* ========================================
+   9. FORM UBAH STATUS
+======================================== */
+
+.form-update-status {
+    background: #f8faf9;
+    border: 1px solid #e5ece8;
+    border-radius: 10px;
+    padding: 22px;
+}
+
+.form-update-status h3 {
+    color: #075b46;
+    font-size: 18px;
+    margin-bottom: 22px;
+}
+
+.form-update-status label {
+    display: block;
+    color: #455a52;
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+#statusBaru,
+#catatanAdmin {
+    display: block;
+    width: 100%;
+    padding: 12px 13px;
+    margin-bottom: 18px;
+    border: 1px solid #d5dfda;
+    border-radius: 7px;
+    background: white;
+    color: #263832;
+    outline: none;
+}
+
+#statusBaru:focus,
+#catatanAdmin:focus {
+    border-color: #08765a;
+    box-shadow: 0 0 0 3px rgba(8, 118, 90, 0.1);
+}
+
+#catatanAdmin {
+    min-height: 110px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+#pesanUpdateStatus {
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 5px 0 15px;
+}
+
+#simpanPerubahanStatus {
+    width: 100%;
+    padding: 13px 18px;
+    background: #08765a;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+#simpanPerubahanStatus:hover {
+    background: #065640;
+}
+
+#simpanPerubahanStatus:disabled {
+    background: #8ba99e;
+    cursor: not-allowed;
+}
+
+
+/* ========================================
+   10. FOOTER MODAL
+======================================== */
+
+.modal-footer {
+    padding: 18px 25px;
+    border-top: 1px solid #e8edf0;
+    display: flex;
+    justify-content: flex-end;
+    background: #fff;
+}
+
+#tutupModalBawah {
+    padding: 11px 25px;
+    background: #075b46;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-weight: 600;
+}
+
+#tutupModalBawah:hover {
+    background: #064b3a;
+}
+
+
+/* ========================================
+   11. RESPONSIVE TABLET
+======================================== */
+
+@media (max-width: 1100px) {
+    .statistik {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .main-content {
+        padding: 25px;
+    }
+}
+
+
+/* ========================================
+   12. RESPONSIVE HP
+======================================== */
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: 0;
+        padding: 18px;
+    }
+
+    .sidebar-header {
+        padding-bottom: 15px;
+    }
+
+    .sidebar-menu {
+        margin-top: 15px;
+    }
+
+    .main-content {
+        padding: 18px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 23px;
+    }
+
+    .statistik {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .stat-card {
+        padding: 18px 15px;
+    }
+
+    .stat-card p {
+        font-size: 25px;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #searchPengajuan {
+        width: 100%;
+    }
+
+    .pengajuan-section {
+        padding: 17px;
+    }
+
+    .modal {
+        padding: 12px;
+    }
+
+    .modal-content {
+        max-height: 94vh;
+    }
+
+    .modal-header,
+    .modal-body {
+        padding: 18px;
+    }
+
+    .form-update-status {
+        padding: 17px;
+    }
+}
+
+@media (max-width: 400px) {
+    .statistik {
+        grid-template-columns: 1fr;
+    }
+}

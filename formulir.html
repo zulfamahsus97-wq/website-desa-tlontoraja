@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formulir Pelayanan Desa Tlontoraja</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <h2>DESA TLONTORAJA</h2>
+            <p>Kecamatan Pasean, Kabupaten Pamekasan</p>
+        </div>
+
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="layanan.html">Pelayanan Desa</a>
+        </nav>
+    </header>
+
+    <!-- JUDUL HALAMAN -->
+    <section class="layanan-hero">
+        <h1>Formulir Pelayanan Desa</h1>
+        <p>
+            Silakan lengkapi formulir pengajuan
+            sesuai jenis pelayanan yang dibutuhkan.
+        </p>
+    </section>
+
+    <!-- FORMULIR PENGAJUAN -->
+    <section class="form-pengajuan">
+        <div class="form-container">
+
+            <div class="form-heading">
+                <span>PELAYANAN ONLINE DESA</span>
+
+                <h2 id="judulFormulir">
+                    Formulir Pengajuan
+                </h2>
+
+                <p id="deskripsiFormulir">
+                    Pilih jenis pelayanan untuk memulai pengajuan.
+                </p>
+            </div>
+
+            <form id="formPelayanan">
+
+                <!-- PILIH JENIS LAYANAN -->
+                <div class="form-group">
+                    <label for="jenisLayanan">
+                        Pilih Jenis Pelayanan
+                    </label>
+
+                    <select id="jenisLayanan" required>
+                        <option value="">-- Pilih Pelayanan --</option>
+
+                        <option value="domisili">
+                            Surat Keterangan Domisili
+                        </option>
+
+                        <option value="pengantar_skck">
+                            Surat Pengantar SKCK
+                        </option>
+
+                        <option value="usaha">
+                            Surat Keterangan Usaha
+                        </option>
+
+                        <option value="sktm">
+                            Surat Keterangan Tidak Mampu
+                        </option>
+
+                        <option value="pengantar_nikah">
+                            Surat Pengantar Nikah
+                        </option>
+
+                        <option value="pembuatan_kk">
+                            Pembuatan Kartu Keluarga
+                        </option>
+
+                        <option value="akta_kelahiran">
+                            Akta Kelahiran
+                        </option>
+
+                        <option value="akta_kematian">
+                            Akta Kematian
+                        </option>
+
+                        <option value="surat_pindah">
+                            Pindah Datang Penduduk
+                        </option>
+
+                        <option value="perubahan_data">
+                            Perubahan Data Kependudukan
+                        </option>
+
+                        <option value="lainnya">
+                            Surat Keterangan Lainnya
+                        </option>
+                    </select>
+                </div>
+
+                <!-- IDENTITAS PEMOHON -->
+                <div class="form-group">
+                    <label for="namaPemohon">
+                        Nama Lengkap Pemohon
+                    </label>
+
+                    <input
+                        type="text"
+                        id="namaPemohon"
+                        placeholder="Masukkan nama lengkap"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="nomorWhatsapp">
+                        Nomor WhatsApp
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="nomorWhatsapp"
+                        placeholder="Contoh: 081234567890"
+                        required
+                    >
+                </div>
+
+                <!-- PERTANYAAN DINAMIS -->
+                <div id="kolomDinamis"></div>
+
+                <!-- UPLOAD DOKUMEN -->
+                <div class="form-group">
+                    <label for="dokumenPelayanan">
+                        Upload Dokumen Persyaratan
+                    </label>
+
+                    <input
+                        type="file"
+                        id="dokumenPelayanan"
+                        accept=".pdf,.jpg,.jpeg,.png"
+                        multiple
+                        required
+                    >
+
+                    <p>
+                        Format PDF, JPG, JPEG, PNG.
+                        Maksimal 5 MB per file.
+                    </p>
+                </div>
+
+                <!-- PERSETUJUAN -->
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="persetujuan" required>
+
+                        Saya menyatakan bahwa data dan dokumen
+                        yang saya kirim benar.
+                    </label>
+                </div>
+
+                <!-- TOMBOL KIRIM -->
+                <button type="submit" class="btn-kirim">
+                    Kirim Pengajuan
+                </button>
+
+                <p id="pesanFormulir" aria-live="polite"></p>
+
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <h2>PEMERINTAH DESA TLONTORAJA</h2>
+        <p>Kecamatan Pasean, Kabupaten Pamekasan.</p>
+        <p>© 2026 Pemerintah Desa Tlontoraja.</p>
+    </footer>
+
+    <script type="module" src="./formulir.js"></script>
+
+</body>
+</html>

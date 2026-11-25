@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lacak Pengajuan | Desa Tlontoraja</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            background: #f4f7f5;
+        }
+
+        .lacak-container {
+            max-width: 650px;
+            margin: 65px auto;
+            padding: 40px;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+        }
+
+        .lacak-icon {
+            width: 65px;
+            height: 65px;
+            margin: 0 auto 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e5f3eb;
+            border-radius: 50%;
+            font-size: 30px;
+        }
+
+        .lacak-container h1 {
+            color: #176747;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .lacak-container > p {
+            text-align: center;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .lacak-group {
+            margin-top: 22px;
+        }
+
+        .lacak-group label {
+            display: block;
+            margin-bottom: 9px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .lacak-group input {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #d8e1dc;
+            border-radius: 9px;
+            box-sizing: border-box;
+            font-size: 15px;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        .lacak-group input:focus {
+            border-color: #176747;
+            box-shadow: 0 0 0 3px rgba(23, 103, 71, 0.10);
+        }
+
+        #tombolLacak {
+            width: 100%;
+            padding: 15px;
+            margin-top: 28px;
+            background: #176747;
+            color: white;
+            border: none;
+            border-radius: 9px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        #tombolLacak:hover {
+            background: #105237;
+        }
+
+        #tombolLacak:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        #hasilPelacakan {
+            margin-top: 25px;
+        }
+
+        .hasil-card {
+            padding: 20px;
+            background: #f2f8f5;
+            border-radius: 10px;
+            border-left: 5px solid #176747;
+        }
+
+        .hasil-card p {
+            margin: 12px 0;
+        }
+
+        .status-hasil {
+            display: inline-block;
+            padding: 7px 13px;
+            border-radius: 20px;
+            background: #dcefe5;
+            color: #176747;
+            font-weight: bold;
+        }
+
+        .pesan-error {
+            color: #c62828;
+            text-align: center;
+        }
+
+        .pesan-info {
+            color: #176747;
+            text-align: center;
+        }
+
+        .lacak-kembali {
+            display: block;
+            text-align: center;
+            margin-top: 25px;
+            color: #176747;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .lacak-kembali:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .lacak-container {
+                margin: 30px 15px;
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <h2>DESA TLONTORAJA</h2>
+            <p>Kecamatan Pasean, Kabupaten Pamekasan</p>
+        </div>
+
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="layanan.html">Pelayanan Desa</a>
+        </nav>
+    </header>
+
+    <!-- FORM PELACAKAN -->
+    <main>
+        <section class="lacak-container">
+
+            <div class="lacak-icon">🔎</div>
+
+            <h1>Lacak Pengajuan</h1>
+
+            <p>
+                Periksa perkembangan pengajuan pelayanan
+                administrasi Desa Tlontoraja secara online.
+                Masukkan nomor registrasi dan nomor WhatsApp
+                yang digunakan saat mengajukan permohonan.
+            </p>
+
+            <form id="formLacak">
+
+                <div class="lacak-group">
+                    <label for="nomorRegistrasi">
+                        Nomor Registrasi
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nomorRegistrasi"
+                        placeholder="Contoh: SKD-0E4A8BCA88"
+                        required
+                    >
+                </div>
+
+                <div class="lacak-group">
+                    <label for="nomorWhatsapp">
+                        Nomor WhatsApp
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="nomorWhatsapp"
+                        placeholder="Contoh: 085960140975"
+                        required
+                    >
+                </div>
+
+                <button type="submit" id="tombolLacak">
+                    Lacak Pengajuan
+                </button>
+
+            </form>
+
+            <!-- HASIL PELACAKAN -->
+            <div id="hasilPelacakan" aria-live="polite"></div>
+
+            <a href="layanan.html" class="lacak-kembali">
+                ← Kembali ke Pelayanan Desa
+            </a>
+
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <h2>PEMERINTAH DESA TLONTORAJA</h2>
+        <p>Kecamatan Pasean, Kabupaten Pamekasan.</p>
+        <p>© 2026 Pemerintah Desa Tlontoraja.</p>
+    </footer>
+
+    <script type="module" src="lacak-pengajuan.js"></script>
+
+</body>
+</html>
